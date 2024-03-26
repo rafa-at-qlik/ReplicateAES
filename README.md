@@ -1,6 +1,6 @@
-## ReplicateAES 
+# ReplicateAES 
 
-# Summary
+## Summary
 The following repo provides a procedure to encrypt column's data in Qlik Replcate. Let's say we have an Oracle table with credit card information:
 
 <img src="images/oracle_query.png" width="400">
