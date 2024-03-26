@@ -72,3 +72,68 @@ $ sed -i 's/MyTransformation/aes_encrypt/g' Makefile
 $ grep -i MyTransformation Makefile
 $
 ```
+
+Let’s compile the new UDF:
+```console
+$ cd /opt/attunity/replicate/addons/samples/aes_encrypt
+$ make
+cc -fPIC -Wall -Wextra -O2 -g -I../../include  -MM aes_encrypt.c >aes_encrypt.d
+cc -fPIC -Wall -Wextra -O2 -g -I../../include    -c -o aes_encrypt.o aes_encrypt.c
+aes_encrypt.c: In function ‘encrypt_aes_ecb_pkcs7’:
+aes_encrypt.c:67:15: warning: unused variable ‘key_length’ [-Wunused-variable]
+     const int key_length = strlen(private_key);
+               ^~~~~~~~~~
+cc -shared   -o aes_encrypt.so aes_encrypt.o
+$
+```
+
+In the <INSTALL_DIR>/addons directory, copy the addons_def.json.sample and edit the json to reflect the new library:
+
+```console
+$ cd /opt/attunity/replicate/addons
+$ cp -p addons_def.json.sample addons_def.json 
+$ vim addons_def.json
+{
+        "addons":
+        [
+                {
+                        "name": "MyPasswordProvider",
+                        "type": "STARTUP",
+                        "lib_path": "samples/MyPasswordProvider/MyPasswordProvider.so",
+                        "init_function":        "ar_addon_init"
+                },
+                {
+                        "name": "MyTransformation",
+                        "type": "STARTUP",
+                        "lib_path": "samples/MyTransformation/MyTransformation.so",
+                        "init_function": "ar_addon_init"
+                },
+                {
+                        "name": "aes_encrypt",
+                        "type": "STARTUP",
+                        "lib_path": "samples/aes_encrypt/aes_encrypt.so",
+                        "init_function": "ar_addon_init"
+                }
+        ]
+}
+```
+
+Save the addons_def.json and restart the replicate service: 
+
+```console
+$ /opt/attunity/replicate/bin/areplicate stop
+$ lsof -i:3552
+$
+$ /opt/attunity/replicate/bin/areplicate start
+```
+After restarting the service, access the Qlik Replicate GUI and check the UDT is visible now:
+
+<img src="images/replicate_udf.png" width="600">
+
+Let’s test the function with input data provided with us, to see if we achieve the same result as in DataBricks before starting the Replicate Task:
+
+<img src="images/udf_test.png" width="600">
+
+We can see the encrypted string matches with the one provided in the DataBricks documentation:
+
+<img src="images/udf_enc_match.png" width="600">
