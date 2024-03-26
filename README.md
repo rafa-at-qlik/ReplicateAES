@@ -122,7 +122,7 @@ Save the addons_def.json and restart the replicate service:
 
 ```console
 $ /opt/attunity/replicate/bin/areplicate stop
-$ lsof -i:3552
+$ sudo lsof -i:3552
 $
 $ /opt/attunity/replicate/bin/areplicate start
 ```
