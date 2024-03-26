@@ -17,4 +17,17 @@ But still be able to decrypt the table with the proper key:
 
 <img src="images/databricks_decrypted_query.png" width="400">
 
+## Quick Start
+
+Move to the <INSTALL_DIR>/addons/samples directory and check the contents:
+
+$ cd /opt/attunity/replicate/addons/samples/
+$ ls -lrth
+total 0
+drwxrwxr-x. 2 qlik qlik 148 Feb 20 14:00 MyPasswordProvider
+drwxrwxr-x. 2 qlik qlik 148 Feb 20 14:00 MyTransformation
+drwxrwxr-x. 2 qlik qlik 131 Feb 20 14:00 docker
+
+
+
 
