@@ -5,15 +5,16 @@ The following repo provides a procedure to encrypt column's data in Qlik Replcat
 
 <img src="images/oracle_query.png" width="400">
 
-We have the following replicate task:
+We have the following Replicate task:
 
-![alt text](images/replicate_task.png)
+<img src="images/replicate_task.png" width="400">
 
 And we want the information to be encrypted before arriving to DataBricks
 
-![alt text](images/databricks_enc_query.png)
+<img src="images/databricks_enc_query.png" width="400">
 
 But still be able to decrypt the table with the proper key:
 
-![alt text](images/databricks_decrypted_query.png)
+<img src="images/databricks_enc_query.png" width="400">
+
 
