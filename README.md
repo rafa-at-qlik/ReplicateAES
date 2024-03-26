@@ -17,9 +17,9 @@ But still be able to decrypt the table with the proper key:
 
 <img src="images/databricks_decrypted_query.png" width="600">
 
-## Quick Start
+## Quick Start - Replicate Linux
 
-Move to the <INSTALL_DIR>/addons/samples directory and check the contents:
+After installing Qlik Replicate in Linux, move to the <INSTALL_DIR>/addons/samples directory and check the contents:
 
 ```console
 $ cd /opt/attunity/replicate/addons/samples/
