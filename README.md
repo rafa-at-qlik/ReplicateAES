@@ -1,2 +1,2 @@
 # ReplicateAES
-UDF for Replicate to Encrypt via AES
+UDF for Replicate to transform columns encrypted via AES 
