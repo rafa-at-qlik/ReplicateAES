@@ -137,3 +137,9 @@ Let’s test the function with input data provided with us, to see if we achieve
 We can see the encrypted string matches with the one provided in the DataBricks documentation:
 
 <img src="images/udf_enc_match.png" width="600">
+
+More info about DataBricks aes_encrypt() in:
+
+https://docs.databricks.com/en/sql/language-manual/functions/aes_encrypt.html
+
+
