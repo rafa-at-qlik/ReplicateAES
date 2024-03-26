@@ -15,6 +15,6 @@ And we want the information to be encrypted before arriving to DataBricks
 
 But still be able to decrypt the table with the proper key:
 
-<img src="images/databricks_enc_query.png" width="400">
+<img src="images/databricks_decrypted_query.png" width="400">
 
 
