@@ -3,7 +3,8 @@
 # Summary
 The following repo provides a procedure to encrypt column's data in Qlik Replcate. Let's say we have an Oracle table with credit card information:
 
-![alt text](images/oracle_query.png =100x100)
+![alt text](images/oracle_query.png)
+<img src="images/oracle_query.png" width="200">
 
 We have the following replicate task:
 
