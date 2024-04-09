@@ -27,7 +27,6 @@ AR_AO_EXPORTED int ar_addon_init(AR_ADDON_CONTEXT *context)
         return 0;
 }
 
-
 //Error handling
 //Use sqlite3_result_error_code function to return an error.
 //Three codes could have been used:
@@ -65,7 +64,7 @@ char* base64_encode(const unsigned char *input, int length) {
 
 // Function to encrypt plaintext using AES ECB mode with PKCS#7 padding
 char* encrypt_aes_ecb_pkcs7(const char *private_key, const char *plaintext) {
-    const int key_length = strlen(private_key);
+    //const int key_length = strlen(private_key);
     const int plaintext_length = strlen(plaintext);
 
     // Initialize the cipher context for ECB
@@ -76,7 +75,7 @@ char* encrypt_aes_ecb_pkcs7(const char *private_key, const char *plaintext) {
     }
 
     // Initialize encryption operation for ECB
-    if (EVP_EncryptInit_ex(ctx, EVP_aes_128_ecb(), NULL, (const unsigned char *)private_key, NULL) != 1) {
+    if (EVP_EncryptInit_ex(ctx, EVP_aes_256_ecb(), NULL, (const unsigned char *)private_key, NULL) != 1) {
         fprintf(stderr, "EVP_EncryptInit_ex failed\n");
         EVP_CIPHER_CTX_free(ctx);
         return NULL;
