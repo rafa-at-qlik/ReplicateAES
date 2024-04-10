@@ -142,4 +142,6 @@ More info about DataBricks aes_encrypt() in:
 
 https://docs.databricks.com/en/sql/language-manual/functions/aes_encrypt.html
 
+Note: If you're using Oracle, ensure the table columns where you'll be using the UDF, have supplemental logging, e.g.:
 
+SQL> ALTER DATABASE ADD SUPPLEMENTAL LOG DATA (ALL) COLUMNS;
