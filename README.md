@@ -18,6 +18,11 @@ But still be able to decrypt the table with the proper key:
 <img src="images/databricks_decrypted_query.png" width="600">
 
 ## Quick Start - Replicate Linux
+Ensure you have openssl installed on your Linux OS:
+
+```console
+$ sudo yum install -y openssl-devel
+```
 
 After installing Qlik Replicate in Linux, move to the <INSTALL_DIR>/addons/samples directory and check the contents:
 
