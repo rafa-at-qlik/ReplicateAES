@@ -1,4 +1,6 @@
-![image](https://github.com/rafa-at-qlik/ReplicateAES/assets/124567817/6cc1964f-a69c-4d61-a226-6c2a89060066)# ReplicateAES 
+# ReplicateAES 
+
+![image](https://github.com/rafa-at-qlik/ReplicateAES/assets/124567817/6cc1964f-a69c-4d61-a226-6c2a89060066)
 
 ## Summary
 The following repo provides a procedure to encrypt column's data in Qlik Replcate. Let's say we have an Oracle table with credit card information:
