@@ -5,7 +5,7 @@ The following repo provides a procedure to encrypt column's data in Qlik Replcat
 
 <img src="images/oracle_query.png" width="600">
 
-We have the following Replicate task:
+and the following Replicate task:
 
 <img src="images/replicate_task.png" width="600">
 
